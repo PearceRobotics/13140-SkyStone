@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="ProjectCodeStyleConfiguration">
+    <code_scheme name="Project" version="173">
+      <codeStyleSettings language="XML">
+        <indentOptions>
+          <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        </indentOptions>
+        <arrangement>
+          <rules>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>xmlns:android</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>^$</XML_NAMESPACE>
+                  </AND>
+                </match>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>xmlns:.*</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>^$</XML_NAMESPACE>
+                  </AND>
+                </match>
+                <order>BY_NAME</order>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>.*:id</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+                  </AND>
+                </match>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>.*:name</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+                  </AND>
+                </match>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>name</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>^$</XML_NAMESPACE>
+                  </AND>
+                </match>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>style</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>^$</XML_NAMESPACE>
+                  </AND>
+                </match>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>.*</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>^$</XML_NAMESPACE>
+                  </AND>
+                </match>
+                <order>BY_NAME</order>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>.*</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+                  </AND>
+                </match>
+                <order>ANDROID_ATTRIBUTE_ORDER</order>
+              </rule>
+            </section>
+            <section>
+              <rule>
+                <match>
+                  <AND>
+                    <NAME>.*</NAME>
+                    <XML_ATTRIBUTE />
+                    <XML_NAMESPACE>.*</XML_NAMESPACE>
+                  </AND>
+                </match>
+                <order>BY_NAME</order>
+              </rule>
+            </section>
+          </rules>
+        </arrangement>
+      </codeStyleSettings>
+    </code_scheme>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/main.iml" filepath="$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/main.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+  </component>
+  <component name="libraryTable">
+    <library name="gradle-wrapper">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/gradle/wrapper/gradle-wrapper.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="libs">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/RobotServer-release-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/RobotCore-release-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/Blocks-release-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/Hardware-release-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/OnBotJava-release-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/Vuforia.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/Inspection-release-sources.jar!/" />
+        <root url="jar://$PROJECT_DIR$/SkyStone-master/libs/FtcCommon-release-sources.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</project>
