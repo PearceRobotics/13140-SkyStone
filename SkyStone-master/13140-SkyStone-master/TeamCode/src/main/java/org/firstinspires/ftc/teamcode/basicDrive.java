@@ -17,7 +17,7 @@ public class basicDrive extends BasicOpMode_Linear {
     public void runOpMode() {
         imu = hardwareMap.get(Gyroscope.class, "imu");
         lMotor = hardwareMap.get(DcMotor.class, "lMotor");
-        lMotor = hardwareMap.get(DcMotor.class, "rMotor");
+        rMotor = hardwareMap.get(DcMotor.class, "rMotor");
         //digitalTouch = hardwareMap.get(DigitalChannel.class, "digitalTouch");
         //sensorColorRange = hardwareMap.get(DistanceSensor.class, "sensorColorRange");
         //servoTest = hardwareMap.get(Servo.class, "servoTest");
