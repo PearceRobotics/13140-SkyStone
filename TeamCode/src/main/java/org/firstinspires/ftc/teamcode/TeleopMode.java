@@ -1,9 +1,13 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.hardware.motors.RevRoboticsCoreHexMotor;
+import com.qualcomm.hardware.rev.RevSPARKMini;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.ServoController;
 
 @TeleOp(name = "Teleop", group = "Teleop" )
 public class TeleopMode extends OpMode
@@ -14,9 +18,11 @@ public class TeleopMode extends OpMode
     private DcMotor motorFrontLeft;
     private DcMotor motorBackLeft;
     private DcMotor motorBackRight;
-    //private DcMotor motorArm;
-    //private DcMotor motorIntake;
+    private DcMotorSimple motorArm;
+    private DcMotorSimple motorIntake;
     private final double MAXINTAKESPEED = 1;
+    enum Direction { FOWARD, REVERSE }
+
 
     @Override
     public void init() {
@@ -24,8 +30,8 @@ public class TeleopMode extends OpMode
         motorFrontRight = hardwareMap.get(DcMotor.class, "motorFrontRight");
         motorBackLeft = hardwareMap.get(DcMotor.class, "motorBackLeft");
         motorBackRight = hardwareMap.get(DcMotor.class, "motorBackRight");
-        //motorArm = hardwareMap.get(DcMotor.class, "motorArm");
-        //motorIntake = hardwareMap.get(DcMotor.class, "motorIntake");
+        motorArm = hardwareMap.get(DcMotorSimple.class, "motorArm");
+        motorIntake = hardwareMap.get(DcMotorSimple.class, "motorIntake");
 
     }
 
@@ -56,17 +62,25 @@ public class TeleopMode extends OpMode
 
         if(gamepad1.left_bumper)
         {
-            //motorArm.setPower(-MAXINTAKESPEED);
-            //motorIntake.setPower(MAXINTAKESPEED);
+            motorArm.setPower(-MAXINTAKESPEED);
+            motorIntake.setPower(-MAXINTAKESPEED);
+
+            telemetry.addData("motor Intake status:", motorIntake.getDirection());
+            telemetry.update();
 
         } else if (gamepad1.right_bumper)
         {
-            //motorArm.setPower(MAXINTAKESPEED);
-            //motorIntake.setPower(MAXINTAKESPEED);
+            motorArm.setPower(MAXINTAKESPEED);
+            motorIntake.setPower(MAXINTAKESPEED);
+
+            telemetry.addData("motor Intake status:", motorIntake.getDirection());
+            telemetry.update();
+
         }
         else
         {
-            //motorArm.setPower(0);
+            motorArm.setPower(0);
+            motorIntake.setPower(0);
         }
 
 
