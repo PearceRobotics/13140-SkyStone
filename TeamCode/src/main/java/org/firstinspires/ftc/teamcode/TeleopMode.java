@@ -1,13 +1,9 @@
 package org.firstinspires.ftc.teamcode;
-
-import com.qualcomm.hardware.motors.RevRoboticsCoreHexMotor;
-import com.qualcomm.hardware.rev.RevSPARKMini;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.ServoController;
 
 @TeleOp(name = "Teleop", group = "Teleop" )
 public class TeleopMode extends OpMode
@@ -20,6 +16,8 @@ public class TeleopMode extends OpMode
     private DcMotor motorBackRight;
     private DcMotorSimple motorArm;
     private DcMotorSimple motorIntake;
+    private ColorSensor color_SensorLeft;
+    private ColorSensor color_SensorRight;
     private final double MAXINTAKESPEED = 1;
     enum Direction { FOWARD, REVERSE }
 
@@ -32,6 +30,8 @@ public class TeleopMode extends OpMode
         motorBackRight = hardwareMap.get(DcMotor.class, "motorBackRight");
         motorArm = hardwareMap.get(DcMotorSimple.class, "motorArm");
         motorIntake = hardwareMap.get(DcMotorSimple.class, "motorIntake");
+        color_SensorLeft = hardwareMap.get(ColorSensor.class, "color_SensorLeft");
+        color_SensorRight = hardwareMap.get(ColorSensor.class,   "color_SensorRight");
 
     }
 
@@ -58,6 +58,21 @@ public class TeleopMode extends OpMode
         motorBackLeft.setPower(gamepad1.right_trigger);
         motorFrontLeft.setPower(-gamepad1.right_trigger);
         motorFrontRight.setPower(-gamepad1.right_trigger);
+
+        color_SensorLeft.red();//detects colors doesn't have much purpose during teleop mostly used for auton
+        color_SensorLeft.blue();
+        color_SensorLeft.green();
+        color_SensorLeft.alpha();
+        color_SensorLeft.argb();
+
+
+        color_SensorRight.red();//detects colors doesn't have much purpose during teleop mostly used for auton
+        color_SensorRight.blue();
+        color_SensorRight.green();
+        color_SensorRight.alpha();
+        color_SensorRight.argb();
+
+
 
 
         if(gamepad1.left_bumper)
